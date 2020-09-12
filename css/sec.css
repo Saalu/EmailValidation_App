@@ -57,28 +57,63 @@ box-shadow: var(--shadow);
     letter-spacing: 1px;
     outline: none;
     border:none;
-    background: transparent;
+    background:none;
     color:#fff;
+    border-bottom: 1px solid #fff;
     
 }
-.container form .inputBox input{
-    border-bottom: 1px solid #fff;
+
+/* validation messages */
+  form .inputBox.success input{
+    border-bottom: 1px solid var(--green);
+} 
+  form .inputBox.error input{
+    border-bottom: 1px solid var(--red);
+} 
+  form .inputBox.success i.fa-check-circle{
+    color:var(--green);
+    visibility: visible;
+
+} 
+  form .inputBox.error i.fa-exclamation-circle{
+    color:var(--red);
+    visibility: visible;
+
+    
+} 
+
+form .inputBox.success small{
+    color:var(--green);
+
+} 
+form .inputBox.error small{
+    color:var(--red);
+
+} 
+
+.container form .inputBox i{
+    position: absolute;
+    top:30px;
+    right: 10px;
+    visibility: hidden;
 
 }
-.container form .inputBox .error{
+
+
+/* .container form .inputBox{
     border-bottom: 1px solid var(--red);
     
 }
-.container form .inputBox .valid{
+.container form .inputBox {
     border-bottom: 1px solid var(--green);
 
-}
+} */
 .container form .inputBox label{
     letter-spacing: 1px;
-    font-size: 1rem;
+    /* font-size: 1rem;
     position: absolute;
     top:10px;
-    left: 0;
+    left: 0; */
     pointer-events: none;
     
 }
@@ -165,7 +200,7 @@ footer .contact{
 .valid{
 color:var(--green)
 }
-.error{
-    color:var(--red)
+form .error input{
+    border-color: var(--red)
 
 }
