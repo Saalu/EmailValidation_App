@@ -40,6 +40,7 @@ body{
 border-radius: 0 10px 10px 0;
 border-right: 1px solid #eee;
 box-shadow: var(--shadow);
+width: fit-content;
 }
 
 .form-title{
@@ -158,6 +159,7 @@ margin-top: 50px 0;
 }
 
 .alert-sent,.alert-loading{
+    display: none;
     border-radius:100%;
     background: var(--green);
     width: auto;
@@ -176,7 +178,24 @@ margin-top: 50px 0;
 
 /* alert styles */
 
+/* list Styles */
+.list-items {
+    padding:  20px 0;
+}
+.list-items .fa-check{
+    color:green;
+    cursor: pointer;
+    opacity: 1;
+}
+.list-items .fa-trash{
+    color:red;
+    cursor: pointer;
+    opacity: 1;
+}
+.list-items .fa-trash:hover, .fa-check:hover{
+    opacity: .8;
 
+}
 
 
 footer{
@@ -185,8 +204,6 @@ footer{
     font-size: 1.2rem;
 }
 
-
-
 footer .goal{
     
 }
@@ -194,13 +211,6 @@ footer .goal span{
     color:orange;
 }
 footer .contact{
-
+float:right;
 }
 
-.valid{
-color:var(--green)
-}
-form .error input{
-    border-color: var(--red)
-
-}
