@@ -3,7 +3,9 @@ body{
     margin:0;
     padding: 0;
     box-sizing: border-box;
- 
+    overflow: hidden;
+    background-image: linear-gradient(45deg, var(--blue), var(--dark));
+
 }
 
 :root{
@@ -17,12 +19,11 @@ body{
 }
 .container{
     background: url('img/pic33.jpg') center/cover no-repeat;
-    background-image: linear-gradient(45deg, var(--blue), var(--dark));
    
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 85vh;
     overflow: hidden;
     
 }
@@ -100,21 +101,9 @@ form .inputBox.error small{
 
 }
 
-
-/* .container form .inputBox{
-    border-bottom: 1px solid var(--red);
-    
-}
-.container form .inputBox {
-    border-bottom: 1px solid var(--green);
-
-} */
 .container form .inputBox label{
     letter-spacing: 1px;
-    /* font-size: 1rem;
-    position: absolute;
-    top:10px;
-    left: 0; */
+  
     pointer-events: none;
     
 }
@@ -198,19 +187,47 @@ margin-top: 50px 0;
 }
 
 
-footer{
+footer.info{
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
+    min-height: 15vh;
+    position: relative;
+    background: none;
+
 }
 
 footer .goal{
-    
+/* padding: 0 .5rem; */
+position: absolute;
+bottom:10px;
+margin: 0;
+border-radius: 10px;
+background:#fff;
+height: 40px;
+padding: 1rem 1rem;
+padding-bottom: 0;
 }
 footer .goal span{
-    color:orange;
+  color:orangered
 }
 footer .contact{
-float:right;
+    cursor: pointer;
+    position: absolute;
+    bottom: 100px;
+    right: 5px;
+/* background: #eee; */
+color:#333;
+font-weight: 600;
+padding: 0 .5rem;
+border-radius: 40%;
+transition: .5s;
+opacity: 1;
+background:linear-gradient(40deg, rgba(255, 68, 0, 0.815), var(--blue));
+
+}
+
+footer .contact:hover{
+    opacity: .8;
 }
 
