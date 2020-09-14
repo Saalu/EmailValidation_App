@@ -171,4 +171,5 @@ function onPageLoad(){
         
     })
 
+    emailForm.disabled =true
 }
